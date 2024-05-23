@@ -1,0 +1,9 @@
+{% extends 'app_animales/base.html' %}
+{% block title %}Buscar{% endblock %}
+{% block content %}
+<h1>Buscar Animales</h1>
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Buscar</button>
+</form>
+{% endblock %}

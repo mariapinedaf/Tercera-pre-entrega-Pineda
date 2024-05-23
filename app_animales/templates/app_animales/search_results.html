@@ -1,0 +1,14 @@
+{% extends 'app_animales/base.html' %}
+{% block title %}Resultados de Búsqueda{% endblock %}
+{% block content %}
+<h1>Resultados de Búsqueda</h1>
+{% if results %}
+    <ul>
+        {% for animal in results %}
+            <li>{{ animal.nombre }} - {{ animal.especie }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No se encontraron resultados para "{{ query }}".</p>
+{% endif %}
+{% endblock %}

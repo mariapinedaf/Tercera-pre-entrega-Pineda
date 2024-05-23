@@ -1,0 +1,10 @@
+{% extends 'app_animales/base.html' %}
+{% block title %}Agregar Hábitat{% endblock %}
+{% block content %}
+<h1>Agregar Hábitat</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}
